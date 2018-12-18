@@ -1,11 +1,16 @@
 module.exports = {
   "presets": [ "next/babel" ],
   "plugins": [
-    [
-      "module-resolver", {
-        "root": ["."],
-        "alias": {"styles": "./styles"}
+    ["import", {
+      "libraryName": "antd",
+      "style": "css"
+    }],
+    ["module-resolver", {
+      "root": ["."],
+      "alias": {
+        "styles": "./styles",
+        "config": "./config"
       }
-    ],
+    }],
   ]
 }
