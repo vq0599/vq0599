@@ -9,8 +9,12 @@ module.exports = {
       "root": ["."],
       "alias": {
         "styles": "./styles",
-        "config": "./config"
+        "config": "./config",
+        "components": "./components",
+        "utils": "./utils",
+        "api": "./api",
       }
     }],
+    ["@babel/plugin-proposal-decorators", { "legacy": true }]
   ]
 }
