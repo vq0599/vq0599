@@ -1,3 +1,4 @@
-body {
-  background: #DDD;
-}
+@import "global/index.scss";
+@import "admin/index.scss";
+@import "home.scss";
+@import "login.scss";
