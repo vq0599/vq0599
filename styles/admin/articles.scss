@@ -1,0 +1,79 @@
+.Articles {
+  &-table {
+    margin-top: 20px;
+
+    &-options {
+      i {
+        font-size: 16px;
+        color: #666;
+        cursor: pointer;
+        &:hover {
+          color: #1890ff;
+        }
+      }
+  
+      i + i {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.AEditor {
+  border: 1px solid $borderColor;
+  border-radius: 4px;
+
+  &-title {
+    padding: 5px 10px;
+    height: 50px;
+    width: 100%;
+
+    input {
+      height: 100%;
+      width: 100%;
+      outline: 0;
+      border: 0;
+      font-size: 18px;
+      color: $dark;
+
+      &::placeholder {
+        color: $light;
+      }
+    }
+  }
+
+  &-options {
+    padding: 0 10px;
+    background: #D9D9D9;
+    ul {
+      display: flex;
+
+      li {
+        transition: .2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+
+        & + li { margin-left: 5px; }
+
+        i { font-size: 20px; }
+        &:hover {
+          background: #595959;
+          i { color: #F2F2F2; }
+        }
+      }
+    }
+  }
+
+  &-content {
+    outline: none;
+    width: 100%;
+    border: none;
+    resize: none;
+    padding: 10px;
+    height: calc(100vh - 60px - 130px);
+  }
+}
