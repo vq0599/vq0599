@@ -3,6 +3,12 @@ import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 
 
+const createDefaultContainer = () => {
+  const div = document.createElement('div')
+  document.body.appendChild(div)
+  return div
+}
+
 export default class Portal extends React.Component {
   static propTypes = {
     getContainer: PropTypes.func,
@@ -10,7 +16,7 @@ export default class Portal extends React.Component {
   }
 
   static defaultProps = {
-    getContainer: () => document.body,
+    getContainer: createDefaultContainer,
   }
 
   componentDidMount() {
