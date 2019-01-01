@@ -1,15 +1,11 @@
 import React from 'react'
-import 'styles/index.scss'
 
 
 export default class App extends React.Component {
-  componentDidMount(){
-
-  }
-
+  state = {}
   render() {
     return (
-      <div>
+      <div id="home">
         <h1>Hello World</h1>
       </div>
     )
