@@ -15,6 +15,8 @@ const HTTP_STATUS_TO_MESSAGE = (code) => {
       return '请求参数错误'
     case 401:
       return '鉴权失败，请重新登录'
+    case 413:
+      return '文件大小超出限制'
     default:
       return '服务器出错了~'
   }
