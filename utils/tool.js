@@ -13,3 +13,8 @@ export const dateTimeFormat = (ts, format = 'Y-M-D') => {
     return t[key] < 10 ? `0${t[key]}` : t[key]
   })
 }
+
+
+export const stringSplice = (originStr, start, newStr) => {
+  return originStr.slice(0, start) + newStr + originStr.slice(start)
+}

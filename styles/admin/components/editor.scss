@@ -57,6 +57,13 @@
     height: calc(100vh - 60px - 130px);
   }
 
+  &-notification {
+    background: #f6ffed;
+    li:nth-child(n+2) {
+      margin-top: 10px;
+    }
+  }
+
   &-fullscreen {
     position: fixed;
     height: 100%;
