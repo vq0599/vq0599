@@ -7,6 +7,7 @@ const isClient = typeof window !== undefined
 
 export const axios = nativeAxios.create({
   baseURL: config.DOMAIN,
+  withCredentials: true,
 })
 
 const HTTP_STATUS_TO_MESSAGE = (code) => {
