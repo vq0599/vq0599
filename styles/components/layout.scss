@@ -1,0 +1,40 @@
+.layout {
+  width: 960px;
+  margin: 0 auto;
+
+  & > header {
+    height: 75px;
+    width: 100%;
+    margin-bottom: 40px;
+
+    & > a {
+      font-size: 48px;
+      font-family: 'Pacifico', cursive;
+      color: $theme;
+    }
+
+    nav > a {
+      font-size: 16px;
+      &.active,
+      &:hover {
+        color: $theme;
+      }
+
+      & + a {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  & > footer {
+    height: 60px;
+    margin-top: 40px;
+
+    i.vq0599 {
+      font-size: 28px;
+    }
+    a + a {
+      margin-left: 15px;
+    }
+  }
+}

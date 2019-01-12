@@ -12,8 +12,8 @@
     "deploy": "pm2 start npm --name \"vq0599\" -- start"
   },
   "dependencies": {
-    "antd": "^3.11.2",
     "axios": "^0.18.0",
+    "classnames": "^2.2.6",
     "highlight.js": "^9.13.1",
     "immutability-helper": "^2.8.1",
     "mousetrap": "^1.6.2",

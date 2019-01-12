@@ -1,4 +1,4 @@
-export const dateTimeFormat = (ts, format = 'Y-M-D') => {
+export const timeFormat = (ts, format = 'Y-M-D') => {
   const date = ts instanceof Date ? ts : new Date(ts)
   const t = {
     Y: date.getFullYear(),
