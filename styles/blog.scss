@@ -28,14 +28,19 @@
     color: $gray;
     margin-top: 5px;
 
-    span {
+    div {
       display: flex;
       align-items: center;
-      & + span {
+
+      &:nth-child(n+2) {
         margin-left: 15px;
       }
 
-      i {
+      span {
+        font-style: normal;
+      }
+
+      svg {
         font-size: 12px;
         margin-right: 2px;
       }

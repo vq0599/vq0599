@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from 'components/Layout'
 import api from 'api'
 import { timeFormat } from 'utils/tool'
+import Icon from 'components/Icon'
 
 
 export default class Articles extends React.Component {
@@ -23,9 +24,9 @@ export default class Articles extends React.Component {
                   <h3 className="article-title"><a href={`/p/${id}`}>{title}</a></h3>
                   <p className="ellipsis article-summary">{summary}</p>
                   <div className="article-infos">
-                    <span>{timeFormat(create_time)}</span>
-                    <span> <i className="vq0599 vq-read" /> {pv}</span>
-                    <span> <i className="vq0599 vq-like" /> {pv}</span>
+                    <div>{timeFormat(create_time)}</div>
+                    <div><Icon glyph="read" /><span>{pv}</span></div>
+                    <div><Icon glyph="good" /><span>{pv}</span></div>
                   </div>
                 </li>
               ))

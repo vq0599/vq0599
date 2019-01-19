@@ -1,3 +1,4 @@
+const path = require('path')
 const withSass = require('@zeit/next-sass')
 const withCss = require('@zeit/next-css')
 
@@ -20,6 +21,12 @@ module.exports = withCss(withSass({
         },
       })
     }
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      include: path.resolve(__dirname, './static/icons'),
+      loader: 'svg-sprite-loader',
+    })
 
     return config
   },

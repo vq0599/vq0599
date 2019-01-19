@@ -1,5 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document'
+import SVGSprite from 'svg-sprite-loader/runtime/sprite.build'
 
+
+const SVGSpriteContent = SVGSprite.stringify()
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -15,10 +18,10 @@ export default class MyDocument extends Document {
           <meta name="keywords" content="黄努努,博客,vq0599" />
           <meta name="description" content="黄努努的个人网站" />
           <link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
-          <link href="//at.alicdn.com/t/font_1012682_uktshq56uhh.css" rel="stylesheet" />
           <link href="/static/favicon.ico" rel="icon" />
         </Head>
         <body>
+          <span dangerouslySetInnerHTML={{ __html: SVGSpriteContent }} />
           <Main />
           <NextScript />
         </body>

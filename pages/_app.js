@@ -4,6 +4,10 @@ import Head from 'next/head'
 import 'styles/entry.scss'
 
 
+// import all svg files in webpack context
+const request = require.context('../static/icons', false, /\.svg$/)
+request.keys().forEach(request)
+
 export default class MyApp extends App {
   static async getInitialProps ({ Component, ctx }) {
     let pageProps = {}
