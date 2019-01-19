@@ -1,0 +1,64 @@
+.markdown {
+  font-size: 15px;
+  line-height: 1.65;
+
+  img,
+  canvas,
+  iframe,
+  video,
+  svg,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+
+  a,
+  a:visited {
+    color: $theme;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: underline;
+  }
+
+  blockquote {
+    color: rgba($color: $gray, $alpha: .8);
+    font-weight: 300;
+    margin: 0;
+    border-left: 5px solid $gray;
+    font-style: italic;
+    padding: .7em 1.33em;
+    box-shadow: 1px 1px 4px rgba($color: $gray, $alpha: .125);
+    p { margin: 0; }
+  }
+
+  code:not(.hljs) {
+    border-radius: 2px;
+    color: $theme;
+    background-color: #f4efe1;
+    padding: 2px 5px;
+    font-size: 14px;
+    word-break: break-all;
+  }
+
+  ul {
+    margin: 1em 0;
+    padding-left: 40px;
+    list-style-type: disc;
+    p {
+      margin: 0;
+    }
+  }
+
+  ul ul {
+    margin: .7em 0;
+    list-style-type: circle;
+  }
+
+  ul ul ul {
+    margin: .5em 0;
+    list-style-type: square;
+  }
+}

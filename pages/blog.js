@@ -13,17 +13,16 @@ export default class Articles extends React.Component {
   }
 
   render() {
-    // console.log(this.props)
     return (
       <Layout>
         <div className="article">
           <ul className="article-list">
             {
-              this.props.articles.map(({ id, title, create_time, pv, content }) => (
+              this.props.articles.map(({ id, title, create_time, pv, summary }) => (
                 <li key={id}>
                   <h3 className="article-title"><a href={`/p/${id}`}>{title}</a></h3>
-                  <p className="article-content">{content}</p>
-                  <div className="article-info">
+                  <p className="ellipsis article-summary">{summary}</p>
+                  <div className="article-infos">
                     <span>{timeFormat(create_time)}</span>
                     <span> <i className="vq0599 vq-read" /> {pv}</span>
                     <span> <i className="vq0599 vq-like" /> {pv}</span>

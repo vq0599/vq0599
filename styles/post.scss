@@ -1,24 +1,6 @@
-.article {
-
-  &-list >li {
-    &:nth-child(n+2) {
-      margin-top: 40px;
-    }
-  }
-
-  &-title {
-    font-size: 24px;
-    font-weight: normal;
+.post {
+  & > h1 {
     margin-bottom: 10px;
-    &:hover {
-      color: $theme;
-    }
-  }
-
-  &-summary {
-    word-break: break-all;
-    color: $gray;
-    @include ellipsis(3)
   }
 
   &-infos {
@@ -40,5 +22,9 @@
         margin-right: 2px;
       }
     }
+  }
+
+  &-content {
+    margin-top: 40px;
   }
 }
