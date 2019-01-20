@@ -1,0 +1,33 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  &-logo {
+    margin-right: 30px;
+    width: 160px;
+  }
+
+  &-entry {
+    a:nth-child(n+2) {
+      margin-top: 15px;
+    }
+
+    a {
+      color: $theme;
+      width: 120px;
+      height: 28px;
+      border: 1px solid $theme;
+      border-radius: 4px;
+      padding: 0 8px;
+      &:hover {
+        box-shadow: 0 0 2px rgba($color: $theme, $alpha: .5);
+
+        & > svg {
+          animation: fadeInLeft .5s, infinite;
+        }
+      }
+    }
+  }
+}

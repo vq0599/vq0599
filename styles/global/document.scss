@@ -1,4 +1,13 @@
 body {
-  background: url("/static/background.png");
-  background-attachment: fixed;
+  // background: url("/static/bg.jpg") no-repeat;
+  // background-position: center;
+  // background-size: cover;
+  // background-attachment: fixed;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/static/fonts/Pacifico-Regular.ttf');
 }
