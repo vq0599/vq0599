@@ -17,6 +17,7 @@
     "highlight.js": "^9.13.1",
     "immutability-helper": "^2.8.1",
     "mousetrap": "^1.6.2",
+    "nprogress": "^0.2.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-markdown": "^4.0.4",

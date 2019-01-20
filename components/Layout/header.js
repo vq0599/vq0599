@@ -12,7 +12,9 @@ const Header = ({ router }) => {
 
   return (
     <header className="between">
-      <a href="/">vq0599</a>
+      <Link href="/">
+        <a><img src="/static/title.png" /></a>
+      </Link>
       <nav>
         {routes.map(({ path, label }) => (
           <Link key={path} href={path}>

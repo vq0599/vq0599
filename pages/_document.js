@@ -17,7 +17,6 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <meta name="keywords" content="黄努努,博客,vq0599" />
           <meta name="description" content="黄努努的个人网站" />
-          <link href="//fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" />
           <link href="/static/favicon.ico" rel="icon" />
         </Head>
         <body>

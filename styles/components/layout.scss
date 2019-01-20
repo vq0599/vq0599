@@ -5,14 +5,15 @@
   padding: 0 20px;
 
   & > header {
-    height: 75px;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    padding: 20px 0;
 
     & > a {
-      font-size: 48px;
-      font-family: 'Pacifico', cursive;
-      color: $theme;
+      display: flex;
+      align-items: center;
+      img { width: 150px; }
     }
 
     nav > a {

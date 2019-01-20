@@ -1,5 +1,7 @@
 import React from 'react'
 import App, { Container } from 'next/app'
+import NProgress from 'nprogress'
+import Router from 'next/router'
 import Head from 'next/head'
 import 'styles/entry.scss'
 
@@ -17,6 +19,12 @@ export default class MyApp extends App {
     }
 
     return { pageProps }
+  }
+
+  componentDidMount() {
+    Router.onRouteChangeStart = () => NProgress.start()
+    Router.onRouteChangeComplete = () => NProgress.done()
+    Router.onRouteChangeError = () => NProgress.done()
   }
 
   render () {
