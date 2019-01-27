@@ -12,7 +12,7 @@ export default function Articles ({ articles }) {
       <div className="article">
         <ul className="article-list">
           {
-            articles.map(({ id, title, create_time, pv, summary }) => (
+            articles.map(({ id, title, create_time, read_number, summary }) => (
               <li key={id}>
                 <h3 className="article-title">
                   <Link href={`/p/${id}`}><a>{title}</a></Link>
@@ -20,8 +20,8 @@ export default function Articles ({ articles }) {
                 <p className="ellipsis article-summary">{summary}</p>
                 <div className="article-infos">
                   <div>{timeFormat(create_time)}</div>
-                  <div><Icon glyph="read" /><span>{pv}</span></div>
-                  <div><Icon glyph="good" /><span>{pv}</span></div>
+                  <div><Icon glyph="read" /><span>{read_number}</span></div>
+                  {/* <div><Icon glyph="good" /><span>{like}</span></div> */}
                 </div>
               </li>
             ))
