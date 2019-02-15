@@ -1,11 +1,12 @@
 import React from 'react'
-import api from 'api'
+import api, { API_PREFIX } from 'api'
 import Layout from 'components/Layout'
 import { timeFormat } from 'utils/tool'
 import Icon from 'components/Icon'
+import config from 'config'
 
 
-export default function postPage({ title, html, read_number, create_time }) {
+export default function postPage({ id, title, html, read_number, create_time }) {
   return (
     <Layout>
       <article className="post">
@@ -17,6 +18,7 @@ export default function postPage({ title, html, read_number, create_time }) {
         </div>
         <div className="post-content markdown" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
+      <img src={`${config.DOMAIN}${API_PREFIX}/pv/${id}`} />
     </Layout>
   )
 }
