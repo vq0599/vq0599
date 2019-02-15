@@ -18,7 +18,7 @@ export default function postPage({ id, title, html, read_number, create_time }) 
         </div>
         <div className="post-content markdown" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
-      <img src={`${config.DOMAIN}${API_PREFIX}/pv/${id}`} />
+      <img className="hidden" src={`${config.DOMAIN}${API_PREFIX}/pv/${id}`} />
     </Layout>
   )
 }
