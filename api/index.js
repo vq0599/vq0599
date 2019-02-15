@@ -7,12 +7,14 @@ export const axios = nativeAxios.create({
   withCredentials: true,
 })
 
+export const API_PREFIX = '/api/v1'
+
 const getArticles = () => {
-  return axios.get('/api/v1/articles')
+  return axios.get(`${API_PREFIX}/articles`)
 }
 
 const getArticle = (id) => {
-  return axios.get(`/api/v1/articles/${id}`)
+  return axios.get(`${API_PREFIX}/articles/${id}`)
 }
 
 export default {
