@@ -15,6 +15,12 @@ app.prepare().then(() => {
     app.render(req, res, '/post', query)
   })
 
+  server.get('/blog/page/:page', (req, res) => {
+    const query = { page: req.params.page }
+
+    app.render(req, res, '/blog', query)
+  })
+
   server.get('/index', (req, res) => {
     res.redirect('/')
   })

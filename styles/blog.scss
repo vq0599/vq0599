@@ -46,4 +46,31 @@
       }
     }
   }
+
+  &-pagination {
+    margin-top: 40px;
+    font-size: 18px;
+    border-top: 1px solid $light;
+    padding-top: 20px;
+
+    & > a {
+      color: $gray;
+      display: flex;
+      align-items: center;
+      transition: .3s ease-in-out;
+
+      &:nth-child(1) {
+        transform: translate(8px);
+      }
+
+      &:nth-child(2) {
+        transform: translate(-8px);
+      }
+
+      &:hover {
+        color: $theme;
+        transform: translate(0)
+      }
+    }
+  }
 }

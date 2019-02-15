@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 
 
-export default ({ glyph, size, color, className, ...rest }) => (
+export default ({ glyph, size, color, rotate, className, ...rest }) => (
   <svg
     {...rest}
     className={classNames('icon', className)}
@@ -9,6 +9,7 @@ export default ({ glyph, size, color, className, ...rest }) => (
     style={{
       fontSize: size,
       color,
+      transform: rotate ? `rotate(${rotate}deg)` : undefined,
     }}
   >
     <use xlinkHref={`#${glyph}`} />
