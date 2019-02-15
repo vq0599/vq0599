@@ -9,12 +9,13 @@
     font-size: 24px;
     font-weight: normal;
     margin-bottom: 10px;
-    &:hover {
+    a:hover {
       color: $theme;
     }
   }
 
   &-summary {
+    line-height: 1.65;
     word-break: break-all;
     color: $gray;
     @include ellipsis(3)
