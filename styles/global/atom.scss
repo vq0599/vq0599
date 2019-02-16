@@ -24,12 +24,16 @@
   overflow: hidden;
 }
 
+.stealth {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .hidden {
   display: none;
-  visibility: hidden;
   height: 0;
   width: 0;
-  opacity: 0;
+  @extend .stealth;
 }
 
 @mixin ellipsis($n) {
