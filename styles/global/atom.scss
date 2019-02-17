@@ -36,6 +36,13 @@
   @extend .stealth;
 }
 
+.u-link {
+  color: $theme;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 @mixin ellipsis($n) {
   text-overflow: ellipsis;
   overflow: hidden;
