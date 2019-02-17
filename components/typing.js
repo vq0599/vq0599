@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 
-export default function Typing({ text, htmlTag, className, delay, interval }) {
+export default function Typing({ text, htmlTag, className, delay, interval, ...rest }) {
   const Tag = htmlTag
   const [loading, setLoading] = useState(true)
   const [innerText, setInnerText] = useState('|')
@@ -34,7 +34,7 @@ export default function Typing({ text, htmlTag, className, delay, interval }) {
   }, [])
 
   return (
-    <Tag className={classNames('typing', { stealth: loading }, className)}>
+    <Tag {...rest} className={classNames('typing', { stealth: loading }, className)}>
       {innerText}
     </Tag>
   )
