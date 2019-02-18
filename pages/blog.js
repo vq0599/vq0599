@@ -5,6 +5,8 @@ import api from 'api'
 import { timeFormat } from 'utils/tool'
 import Icon from 'components/Icon'
 import classNames from 'classnames'
+import config from 'config'
+import Head from 'next/head'
 
 
 export default function Articles ({ data, page_total, page }) {
@@ -45,6 +47,9 @@ export default function Articles ({ data, page_total, page }) {
             </Link>
           </div>
         }
+        <Head>
+          <title>{`博客 - ${config.META_TITLE}`}</title>
+        </Head>
       </div>
     </Layout>
   )

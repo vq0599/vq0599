@@ -2,7 +2,6 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import NProgress from 'nprogress'
 import Router from 'next/router'
-import Head from 'next/head'
 import 'styles/entry.scss'
 
 
@@ -31,9 +30,6 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <Container>
-        <Head>
-          <title>vq0599-黄努努的个人网站</title>
-        </Head>
         <Component {...pageProps} />
       </Container>
     )
