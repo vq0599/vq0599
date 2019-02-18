@@ -1,31 +1,16 @@
 import Link from 'next/link'
-import { withRouter } from 'next/router'
-import classNames from 'classnames'
+import Navigation from './nav'
 
 
-const Header = ({ router }) => {
-  const routes = [
-    { path: '/', label: '首页' },
-    { path: '/blog', label: '博客' },
-    { path: '/about', label: '关于' },
-  ]
-
+export default function Header() {
   return (
     <header className="between">
       <Link href="/">
         <a><img src="/static/title.png" /></a>
       </Link>
-      <nav>
-        {routes.map(({ path, label }) => (
-          <Link key={path} href={path}>
-            <a className={classNames({ active: path === router.route })}>{label}</a>
-          </Link>
-        ))}
-      </nav>
+      <Navigation />
     </header>
   )
 }
-
-export default withRouter(Header)
 
 

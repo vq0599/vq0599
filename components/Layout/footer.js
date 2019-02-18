@@ -3,7 +3,7 @@ import Icon from 'components/Icon'
 
 
 export default () => (
-  <footer className="between">
+  <footer>
     <p>© 2017-2019 Huang, All Rights Reserved</p>
     <div>
       <a target="_blank" href={config.GITHUB}>
