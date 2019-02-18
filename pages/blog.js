@@ -39,7 +39,7 @@ export default function Articles ({ data, page_total, page }) {
             </Link>
             <Link href={`/blog/page/${page + 1}`}>
               <a className={classNames({ hidden: page === page_total })}>
-                <span>上一页</span>
+                <span>下一页</span>
                 <Icon glyph="arrow" size={22} />
               </a>
             </Link>
