@@ -1,9 +1,10 @@
 import React from 'react'
 import App, { Container } from 'next/app'
+import Head from 'next/head'
 import NProgress from 'nprogress'
 import Router from 'next/router'
+import config from 'config'
 import 'styles/entry.scss'
-
 
 // import all svg files in webpack context
 const request = require.context('../static/icons', false, /\.svg$/)
@@ -30,6 +31,9 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <Container>
+        <Head>
+          <title>{config.META_TITLE}</title>
+        </Head>
         <Component {...pageProps} />
       </Container>
     )
