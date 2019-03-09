@@ -10,7 +10,7 @@ export default () => (
         <Icon glyph="github" />
       </a>
       <a href={`mailto:${config.EMAIL}`}>
-        <Icon glyph="mail" />
+        <Icon glyph="email" />
       </a>
     </div>
   </footer>
