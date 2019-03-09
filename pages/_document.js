@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <meta http-equiv="x-ua-compatible" content="ie=edge" />
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <meta name="keywords" content={config.META_KEYWORDS} />
           <meta name="description" content={config.META_DESCRIPTION} />
