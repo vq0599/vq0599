@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from 'components/Layout'
 import Typing from 'components/typing.js'
 import config from 'config'
-import Head from 'next/head'
 
 
 const TITLE = 'Hi! Welcome to my website~'
@@ -33,7 +32,7 @@ const timelines = [
   },
 ]
 
-export default function About() {
+export default function AboutPage() {
   return (
     <Layout>
       <div className="about">
@@ -82,10 +81,9 @@ export default function About() {
               毕业之初写过几行代码爬了一些三维立体图，有兴趣的可以<a href="https://github.com/vq0599/node-images-crawler" target="_blank">戳我</a>了解一下~</p>
           </div>
         </section>
-        <Head>
-          <title>{`关于 - ${config.META_TITLE}`}</title>
-        </Head>
       </div>
     </Layout>
   )
 }
+
+AboutPage.title = '关于'

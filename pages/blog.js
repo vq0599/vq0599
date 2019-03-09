@@ -5,11 +5,9 @@ import api from 'api'
 import { timeFormat } from 'utils/tool'
 import Icon from 'components/Icon'
 import classNames from 'classnames'
-import config from 'config'
-import Head from 'next/head'
 
 
-export default function Articles ({ data, page_total, page }) {
+export default function ArticlesPage ({ data, page_total, page }) {
   return (
     <Layout>
       <div className="article">
@@ -47,15 +45,14 @@ export default function Articles ({ data, page_total, page }) {
             </Link>
           </div>
         }
-        <Head>
-          <title>{`博客 - ${config.META_TITLE}`}</title>
-        </Head>
       </div>
     </Layout>
   )
 }
 
-Articles.getInitialProps = async ({ query: { page } }) => {
+ArticlesPage.title = '博客'
+
+ArticlesPage.getInitialProps = async ({ query: { page } }) => {
   const resp = await api.getArticles({ page })
   return resp.data.data
 }

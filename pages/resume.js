@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Layout from 'components/Layout'
 import config from 'config'
 import Icon from 'components/Icon'
@@ -114,11 +113,8 @@ export default function ResumePage() {
           </ul>
         </section>
       </div>
-      <Head>
-        <title>{`简历 - ${config.META_TITLE}`}</title>
-      </Head>
     </Layout>
   )
 }
 
-ResumePage.title = 123
+ResumePage.title = '简历'

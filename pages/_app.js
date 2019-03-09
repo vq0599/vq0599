@@ -27,12 +27,19 @@ export default class MyApp extends App {
     Router.onRouteChangeError = () => NProgress.done()
   }
 
+  get title() {
+    const title = this.props.Component.title
+    return title
+      ? `${title} - ${config.META_TITLE}`
+      : config.META_TITLE
+  }
+
   render () {
     const { Component, pageProps } = this.props
     return (
       <Container>
         <Head>
-          <title>{config.META_TITLE}</title>
+          <title>{this.title}</title>
         </Head>
         <Component {...pageProps} />
       </Container>
