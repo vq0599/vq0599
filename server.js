@@ -21,7 +21,7 @@ app.prepare().then(() => {
     app.render(req, res, '/blog', query)
   })
 
-  server.get('/index', (req, res) => {
+  server.get('/index', (_, res) => {
     res.redirect('/')
   })
 
