@@ -18,12 +18,13 @@
 
   a,
   a:visited {
-    color: $theme;
+    color: $blue;
   }
 
   a:hover,
   a:focus,
   a:active {
+    color: $blue-active;
     text-decoration: underline;
   }
 
@@ -49,7 +50,7 @@
 
   ul {
     margin: 1em 0;
-    padding-left: 40px;
+    padding-left: 2em;
     list-style-type: disc;
     p {
       margin: 0;
