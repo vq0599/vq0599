@@ -14,13 +14,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
-    "highlight.js": "^9.13.1",
-    "immutability-helper": "^2.8.1",
-    "mousetrap": "^1.6.2",
     "nprogress": "^0.2.0",
     "react": "16.7.0-alpha.2",
     "react-dom": "16.7.0-alpha.2",
-    "react-markdown": "^4.0.4",
     "svg-sprite-loader": "^4.1.3"
   },
   "devDependencies": {
