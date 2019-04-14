@@ -7,47 +7,6 @@ const SectionTitle = ({ title }) => (
   <h2 className="resume-title"><div>{title}</div></h2>
 )
 
-const experiences = [
-  {
-    title: '小书包（北京）网络有限公司',
-    duration: '2016-07 — 2017-06',
-    projects: [
-      {
-        title: '“党员小书包”后台管理系统',
-        description: '基于jQuery和Bootstrap的后台管理系统，前端server使用Golang（Gin）搭建。现在看来有些落后了，值得讨论的点并不多，但对刚入职场的我的帮助很大。',
-      },
-    ],
-  },
-  {
-    title: '北京站酷网络科技有限公司',
-    duration: '2017-06 — 至今',
-    projects: [
-      {
-        title: '站酷招聘WAP版本',
-        link: 'https://m.zcool.com.cn/job',
-        description: `标准的React单页应用，经典组合React + Redux + React-Router，
-        采用Flexible方案和编译阶段的pxtorem以解决多屏适配问题。
-        职业生涯的第一个React项目，现学现用，和改版前的JSP相比，极大幅度地提高了用户体验。`,
-      },
-      {
-        title: '站酷魔方可视化建站系统',
-        link: 'https://51.design',
-        description: `集成了SPA、SSR、Node.js、小程序、H5等多个项目的大型重交互可视化建站系统，历时一年半的开发周期，<strong>从0到1全程由我对前端领域（人+事）统筹规划</strong>。
-        编辑端主要以React + Redux/MobX构建，访问端采用使用Next.js服务端渲染的方案（SEO+首屏）。
-        基于webpack的MPA + Code Splitting的打包方式，搭配External处理稳定的依赖包（CDN及缓存），保证大型项目的基本性能。
-        部署了Sentry生产环境异常监控系统，保证生产环境快速发现并解决问题。`,
-      },
-      {
-        title: '站酷海洛Plus',
-        link: 'https://plus.hellorf.com',
-        description: `基于Next.js和TypeScript的ToB后台管理类项目。
-        技术栈比较奔放，将React Hooks（16.8版本）实践于生产环境，打造了独立于源码底层组件库，采用SVG Symbols的图标解决方案。
-        搭以Eslint和Prettier，保证代码质量。`,
-      },
-    ],
-  },
-]
-
 export default function ResumePage() {
   return (
     <Layout>
@@ -73,34 +32,81 @@ export default function ResumePage() {
         </div>
         <section>
           <SectionTitle title="职业经历" />
-          {
-            experiences.map(({ title, duration, projects }, index) => (
-              <div key={index} className="resume-experience">
-                <h3 className="between">
-                  <span>{duration}</span>
-                  <span>{title}</span>
-                </h3>
-                <ul>
-                  {projects.map(({ title, description, link }, i) => (
-                    <li key={`${index}-${i}`}>
-                      <span>{title}</span>
-                      { link && <a target="_blank" className="link" href={link}>{link}</a> }
-                      <p dangerouslySetInnerHTML={{ __html: description }} />
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))
-          }
+          <div className="resume-experience">
+            <h3 className="between">
+              <span>小书包（北京）网络有限公司</span>
+              <span>2016-07 — 2017-06</span>
+            </h3>
+            <ul>
+              <li>
+                <span>“党员小书包”后台管理系统</span>
+                <div>
+                  毕业后第一个项目，基于jQuery和Bootstrap搭建后台管理系统，也写一些服务端Golang。
+                  作为创业公司唯一一个专职前端，很快就独挑大梁并指导两名实习生。现在看来项目有些落后了，值得讨论的点并不多，但对初入职场的我的帮助很大。
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div className="resume-experience">
+            <h3 className="between">
+              <span>北京站酷网络科技有限公司</span>
+              <span>2017-06 — 至今</span>
+            </h3>
+            <ul>
+              <li>
+                <span>站酷招聘WAP版本</span>
+                <a target="_blank" href="https://m.zcool.com.cn/job">https://m.zcool.com.cn/job</a>
+                <div>
+                  职业生涯的第一个React项目，相对比较简单的移动端单页WEBAPP应用。
+                  采用了经典组合React + Redux + React-Router，基于
+                  <a target="_blank" href="https://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html">Flexible</a>方案和
+                  <a target="_blank" href="https://github.com/cuth/postcss-pxtorem">pxtorem</a>
+                  以解决多屏适配问题。现学现用，从0到1皆为我独自完成。
+                  作为我司新成立的前端团队的第一个项目作品，得到了公司广泛的好评。比起改版之前的JSP技术栈，切实的提高了开发效率和用户体验。
+                </div>
+              </li>
+              <li>
+                <span>站酷魔方可视化建站系统</span>
+                <a target="_blank" href="https://51.design">https://51.design</a>
+                <div>
+                  一个集成了SPA，SSR同构渲染、小程序、H5等多个项目的大型重交互可视化建站系统，历时一年+的开发周期。
+                  <strong>作为项目前端Leader，从0到1全程由我对前端领域统筹规划</strong>。主要职责为构建项目基础设施，开发核心功能可视化建站编辑器，规划团队日常工作并帮助新人成长。
+                  <ol>
+                    <li>建立了标准的Git-Flow工作流程，通过ESlint和Code Review机制保证代码质量。</li>
+                    <li>基于Webpack的MPA + Code Splitting的构建方式，辅助External CDN处理稳定第三方包，保证基本的加载性能。</li>
+                    <li>重交互的核心功能以React + Redux开发，用户访问端以Node.js + Next.js为基础同构渲染，以满足SEO和首屏快速渲染的强需求。</li>
+                    <li>生产环境部署了Sentry异常监控系统，保证快速发现并解决问题。</li>
+                  </ol>
+                  以下是我从核心功能中总结出的React Library：<a target="_blank" href="https://github.com/zcued/react-dragline">https://github.com/zcued/react-dragline</a>
+                </div>
+              </li>
+              <li>
+                <span>站酷海洛Plus2.0（未上线）</span>
+                <a target="_blank" href="https://plus.hellorf.com">https://plus.hellorf.com</a>
+                <div>
+                  一个ToB类正版视觉内容平台，比较典型的大型<strong>重代码复用</strong>的项目。
+                  <ol>
+                    <li>基于Next.js和TypeScript构建项目，优化开发体验的同时大幅度减少了低级错误的发生。</li>
+                    <li>技术栈比较奔放，将React Hooks（16.8）实践于生产环境，并打造了独立于项目源码的基础组件库：<a target="_blank" href="https://github.com/zcued/poseidon">https://github.com/zcued/poseidon</a>。</li>
+                    <li>项目整体呈现“去CSS化”，采用<a target="_blank" href="https://github.com/styled-components/styled-components">styled-components</a> + 可配置组件化封装的方案，减少80%常规的CSS代码。</li>
+                    <li>业务开发以“低粒度封装，多层次组合”为最佳实践原则，在代码复用和可维护性之间取平衡。</li>
+                  </ol>
+                  除此之外，项目的基础设施比较完善，TSLint + Prettier + Pre Commit检查（<a target="_blank" href="https://github.com/typicode/husky">husky</a>）、PM2管理部署等等，算是成熟度比较高的一个项目。
+                </div>
+              </li>
+            </ul>
+          </div>
         </section>
         <section>
           <SectionTitle title="技能描述" />
           <ul className="resume-skill">
             <li>前端基础好，原生JavaScript（ES6+）掌握出色。</li>
-            <li>擅长React及同构渲染Next.js技术栈，对Ant Design源码级别的了解。</li>
-            <li>了解社区主流的最佳实践，包括但不限于MobX/Redux/TypeScript/Immutable。</li>
-            <li>熟悉前端项目构建方案（Webpack/Babel），能够根据业务场景搭建适当的基础设施。</li>
-            <li>不设限，对全栈Web领域（Node.js、Golang）有所学习。（基于Golang和MySQL的RESTful API服务<a className="link" href="https://github.com/vq0599/vq0599-server">https://github.com/vq0599/vq0599-server</a>）</li>
+            <li>擅长React（Next.js）技术栈，了解社区主流的技术方案和最佳实践，不一一列举。
+            </li>
+            <li>不设限，对全栈Web领域（Node.js、Golang）有所学习。
+              （我为个人网站写的基于Go的RESTful API服务<a href="https://github.com/vq0599/vq0599-server">https://github.com/vq0599/vq0599-server</a>）
+            </li>
+            <li>熟悉现代化的前端项目构建方案（Webpack/Babel），能够根据业务场景搭建适当的基础设施。</li>
             <li>不拘泥于具体技术，需要什么就能拾起什么。</li>
           </ul>
         </section>
@@ -109,7 +115,8 @@ export default function ResumePage() {
           <ul className="resume-skill">
             <li>职业素质好，连续两年的最佳绩效Top奖金。</li>
             <li>有自主思维，重视技术但不唯技术论。</li>
-            <li>如果有需要，可能可以独自带领产品线。</li>
+            <li>如果有需要，也许可以带小团队。</li>
+            <li>希望的发展方向是WEB全栈，精力足够的话，也很愿意玩一玩大前端。</li>
           </ul>
         </section>
       </div>
