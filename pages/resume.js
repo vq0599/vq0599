@@ -54,14 +54,13 @@ export default function ResumePage() {
             </h3>
             <ul>
               <li>
-                <span>站酷招聘WAP版本</span>
+                <span>站酷招聘WAP版</span>
                 <a target="_blank" href="https://m.zcool.com.cn/job">https://m.zcool.com.cn/job</a>
                 <div>
-                  职业生涯的第一个React项目，相对比较简单的移动端单页WEBAPP应用。
+                  职业生涯的第一个React项目，标准的移动端单页WEBAPP。
                   采用了经典组合React + Redux + React-Router，基于
-                  <a target="_blank" href="https://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html">Flexible</a>方案和
-                  <a target="_blank" href="https://github.com/cuth/postcss-pxtorem">pxtorem</a>
-                  以解决多屏适配问题。现学现用，从0到1皆为我独自完成。
+                  <a target="_blank" href="https://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html">Flexible</a>和
+                  <a target="_blank" href="https://github.com/cuth/postcss-pxtorem">pxtorem</a>的方案以解决多屏适配问题。现学现用，从0到1皆为我独自完成。
                   作为我司新成立的前端团队的第一个项目作品，得到了公司广泛的好评。比起改版之前的JSP技术栈，切实的提高了开发效率和用户体验。
                 </div>
               </li>
@@ -70,7 +69,7 @@ export default function ResumePage() {
                 <a target="_blank" href="https://51.design">https://51.design</a>
                 <div>
                   一个集成了SPA，SSR同构渲染、小程序、H5等多个项目的大型重交互可视化建站系统，历时一年+的开发周期。
-                  <strong>作为项目前端Leader，从0到1全程由我对前端领域统筹规划</strong>。主要职责为构建项目基础设施，开发核心功能可视化建站编辑器，规划团队日常工作并帮助新人成长。
+                  <strong>作为项目前端owner，从0到1全程由我对前端领域统筹规划</strong>。主要职责为构建项目基础设施，开发核心功能可视化建站编辑器，规划团队日常工作并帮助新人成长。
                   <ol>
                     <li>建立了标准的Git-Flow工作流程，通过ESlint和Code Review机制保证代码质量。</li>
                     <li>基于Webpack的MPA + Code Splitting的构建方式，辅助External CDN处理稳定第三方包，保证基本的加载性能。</li>
@@ -91,7 +90,7 @@ export default function ResumePage() {
                     <li>项目整体呈现“去CSS化”，采用<a target="_blank" href="https://github.com/styled-components/styled-components">styled-components</a> + 可配置组件化封装的方案，减少80%常规的CSS代码。</li>
                     <li>业务开发以“低粒度封装，多层次组合”为最佳实践原则，在代码复用和可维护性之间取平衡。</li>
                   </ol>
-                  除此之外，项目的基础设施比较完善，TSLint + Prettier + Pre Commit检查（<a target="_blank" href="https://github.com/typicode/husky">husky</a>）、PM2管理部署等等，算是成熟度比较高的一个项目。
+                  除此之外，项目的基础设施比较完善，TSLint + Prettier + Pre Commit检查、PM2管理部署等等，算是成熟度比较高的一个项目。
                 </div>
               </li>
             </ul>
@@ -100,13 +99,14 @@ export default function ResumePage() {
         <section>
           <SectionTitle title="技能描述" />
           <ul className="resume-skill">
-            <li>前端基础好，原生JavaScript（ES6+）掌握出色。</li>
-            <li>擅长React（Next.js）技术栈，了解社区主流的技术方案和最佳实践，不一一列举。
+            <li>前端基础好，WEB基础知识扎实，原生JavaScript（ES6+）掌握出色。</li>
+            <li>擅长React（Next.js）技术栈，了解社区主流的技术方案和最佳实践（Redux、Immutable等），对<a href="https://github.com/ant-design/ant-design">Ant Design</a>源码级别的了解。
             </li>
-            <li>不设限，对全栈Web领域（Node.js、Golang）有所学习。
+            <li>不设限，对全栈WEB领域（Node.js、Golang）均有所学习。
               （我为个人网站写的基于Go的RESTful API服务<a href="https://github.com/vq0599/vq0599-server">https://github.com/vq0599/vq0599-server</a>）
             </li>
             <li>熟悉现代化的前端项目构建方案（Webpack/Babel），能够根据业务场景搭建适当的基础设施。</li>
+            <li>掌握开发人员的基础技术栈（Git、Linux、Nginx、PM2等），可独立完成从开发到部署整个流程。</li>
             <li>不拘泥于具体技术，需要什么就能拾起什么。</li>
           </ul>
         </section>
