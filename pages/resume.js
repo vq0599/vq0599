@@ -22,7 +22,7 @@ export default function ResumePage() {
             <li><Icon glyph="location" /><span>北京</span></li>
             <li><Icon glyph="telephone" /><span>18500041947</span></li>
             <li><Icon glyph="email" /><span>{config.EMAIL}</span></li>
-            <li><Icon glyph="university" /><span>淮海工学院</span></li>
+            <li><Icon glyph="university" /><span>江苏海洋大学</span></li>
             <li><Icon glyph="profession" /><span>信息与计算科学</span></li>
           </ul>
           <ul className="resume-infos">
@@ -58,9 +58,7 @@ export default function ResumePage() {
                 <a target="_blank" href="https://m.zcool.com.cn/job">https://m.zcool.com.cn/job</a>
                 <div>
                   职业生涯的第一个React项目，标准的移动端单页WEBAPP。
-                  采用了经典组合React + Redux + React-Router，基于
-                  <a target="_blank" href="https://www.w3cplus.com/mobile/lib-flexible-for-html5-layout.html">Flexible</a>和
-                  <a target="_blank" href="https://github.com/cuth/postcss-pxtorem">pxtorem</a>的方案以解决多屏适配问题。现学现用，从0到1皆为我独自完成。
+                  采用了经典组合React + Redux + React-Router，基于Flexible和编译阶段pxtorem的方案以解决多屏适配问题。现学现用，从0到1皆为我独自完成。
                   作为我司新成立的前端团队的第一个项目作品，得到了公司广泛的好评。比起改版之前的JSP技术栈，切实的提高了开发效率和用户体验。
                 </div>
               </li>
@@ -80,14 +78,14 @@ export default function ResumePage() {
                 </div>
               </li>
               <li>
-                <span>站酷海洛Plus2.0（未上线）</span>
+                <span>站酷海洛Plus2.0</span>
                 <a target="_blank" href="https://plus.hellorf.com">https://plus.hellorf.com</a>
                 <div>
                   一个ToB类正版视觉内容平台，比较典型的大型<strong>重代码复用</strong>的项目。
                   <ol>
                     <li>基于Next.js和TypeScript构建项目，优化开发体验的同时大幅度减少了低级错误的发生。</li>
                     <li>技术栈比较奔放，将React Hooks（16.8）实践于生产环境，并打造了独立于项目源码的基础组件库：<a target="_blank" href="https://github.com/zcued/poseidon">https://github.com/zcued/poseidon</a>。</li>
-                    <li>项目整体呈现“去CSS化”，采用<a target="_blank" href="https://github.com/styled-components/styled-components">styled-components</a> + 可配置组件化封装的方案，减少80%常规的CSS代码。</li>
+                    <li>基于styled-components搭建“去CSS化”架构体系，采用动态配置样式组件化的封装方案，减少80%常规的CSS代码。</li>
                     <li>业务开发以“低粒度封装，多层次组合”为最佳实践原则，在代码复用和可维护性之间取平衡。</li>
                   </ol>
                   除此之外，项目的基础设施比较完善，TSLint + Prettier + Pre Commit检查、PM2管理部署等等，算是成熟度比较高的一个项目。
@@ -99,24 +97,24 @@ export default function ResumePage() {
         <section>
           <SectionTitle title="技能描述" />
           <ul className="resume-skill">
-            <li>前端基础好，WEB基础知识扎实，原生JavaScript（ES6+）掌握出色。</li>
-            <li>擅长React（Next.js）技术栈，了解社区主流的技术方案和最佳实践（Redux、Immutable等），对<a href="https://github.com/ant-design/ant-design">Ant Design</a>源码级别的了解。
+            <li>WEB基础知识扎实，原生JavaScript（ES6+）掌握出色。</li>
+            <li>擅长React（Next.js）技术栈，了解社区主流的技术方案和最佳实践，对常用的库（Ant Design、Redux）源码程度的掌握。
             </li>
             <li>不设限，对全栈WEB领域（Node.js、Golang）均有所学习。
               （我为个人网站写的基于Go的RESTful API服务<a href="https://github.com/vq0599/vq0599-server">https://github.com/vq0599/vq0599-server</a>）
             </li>
-            <li>熟悉现代化的前端项目构建方案（Webpack/Babel），能够根据业务场景搭建适当的基础设施。</li>
-            <li>掌握开发人员的基础技术栈（Git、Linux、Nginx、PM2等），可独立完成从开发到部署整个流程。</li>
+            <li>熟悉现代化的前端项目构建方案（Webpack），理解其原理并能够根据业务场景搭建适当的基础设施。</li>
+            <li>掌握开发人员的基础技术栈（Git、Linux、Nginx等），可独立完成从开发到部署整个流程。</li>
             <li>不拘泥于具体技术，需要什么就能拾起什么。</li>
           </ul>
         </section>
         <section>
           <SectionTitle title="自我评价" />
           <ul className="resume-skill">
-            <li>职业素质好，连续两年的最佳绩效Top奖金。</li>
+            <li>职业素质好，连续两年的最佳绩效。</li>
             <li>有自主思维，重视技术但不唯技术论。</li>
             <li>如果有需要，也许可以带小团队。</li>
-            <li>希望的发展方向是WEB全栈，精力足够的话，也很愿意玩一玩大前端。</li>
+            <li>希望的发展方向是WEB全栈，精力足够的话，也很愿意研究一下大前端。</li>
           </ul>
         </section>
       </div>
